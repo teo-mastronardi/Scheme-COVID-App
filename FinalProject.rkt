@@ -1,4 +1,5 @@
 #lang racket
+#lang racket
 (require "webScrape.rkt"
          "constants.rkt"
          net/sendurl
@@ -6,7 +7,7 @@
 
 
 
-;; Functions
+;; Display the constants for meanings of restrictions
 (define (showCodes)
   (display green)
   (display yellow)
@@ -20,6 +21,7 @@
   (send-url link-to-test-center))
 
 
+;; Make-shift, not really NLP but NLP for finding symptoms in a sentence from user
 (define (symptom-checker param)
   (cond
         [(empty? param) "Incorrect value. Please tell us how you're feeling"]
@@ -39,6 +41,7 @@
              (you-might-have-the-vid)]))
 
 
+;; Main code of the program
 (define (parser param)
   (cond [(string=? param "1") (display "Please tell us how you are feeling in a sentence or words.
 ")(symptom-checker(string-downcase (read-line)))]
