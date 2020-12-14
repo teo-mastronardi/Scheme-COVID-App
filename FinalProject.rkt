@@ -1,5 +1,4 @@
 #lang racket
-#lang racket
 (require "webScrape.rkt"
          "constants.rkt"
          net/sendurl
