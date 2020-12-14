@@ -22,8 +22,9 @@
 
 ;; Check if the website contains any of the restrictions, and display the respective constant
 (define (getLockdownStatus)
-      (cond [(string-contains? (string-downcase lockdownHTML) "red") red]
+      (cond [(string-contains? (string-downcase lockdownHTML) "grey") gray]
+            [(string-contains? (string-downcase lockdownHTML) "red") red]
             [(string-contains? (string-downcase lockdownHTML) "orange") orange]
             [(string-contains? (string-downcase lockdownHTML) "green") green]
-            [(string-contains? (string-downcase lockdownHTML) "yellow") yellow]
-            [(string-contains? (string-downcase lockdownHTML) "gray") gray]))
+            [(string-contains? (string-downcase lockdownHTML) "yellow") yellow]))
+            

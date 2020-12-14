@@ -37,7 +37,9 @@
              (string-contains? param "diarrhea") (string-contains? param "stomach pain")
              (string-contains? param "tiredness") (string-contains? param "fatigue")
              (string-contains? param "fever"))
-             (you-might-have-the-vid)]))
+             (you-might-have-the-vid)]
+        [else "You seem healthy with no symptoms of COVID-19! Remember to practice social distancing
+and wear a mask!"]))
 
 
 ;; Main code of the program
