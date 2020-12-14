@@ -20,11 +20,10 @@
 (define lockdownHTML (port->string
  (get-pure-port (string->url "https://www.wechu.org/cv/local-updates"))))
 
-
+;; Check if the website contains any of the restrictions, and display the respective constant
 (define (getLockdownStatus)
       (cond [(string-contains? (string-downcase lockdownHTML) "red") red]
             [(string-contains? (string-downcase lockdownHTML) "orange") orange]
             [(string-contains? (string-downcase lockdownHTML) "green") green]
             [(string-contains? (string-downcase lockdownHTML) "yellow") yellow]
             [(string-contains? (string-downcase lockdownHTML) "gray") gray]))
-            
